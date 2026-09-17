@@ -1,0 +1,19 @@
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "ask-humans",
+  "main": "src/index.ts",
+  "compatibility_date": "2026-09-17",
+  "observability": {
+    "enabled": true
+  },
+  "vars": {
+    "TURNSTILE_SITE_KEY": ""
+  },
+  "d1_databases": [
+    {
+      "binding": "DB",
+      "database_name": "ask-humans",
+      "database_id": "00000000-0000-0000-0000-000000000000"
+    }
+  ]
+}
