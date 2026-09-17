@@ -6,9 +6,10 @@
   "scripts": {
     "dev": "wrangler dev",
     "deploy": "wrangler deploy",
+    "build": "wrangler deploy --dry-run --outdir dist",
     "typecheck": "tsc --noEmit",
     "test": "vitest run",
-    "check": "npm run typecheck && npm test",
+    "check": "npm run typecheck && npm test && npm run build",
     "db:migrate:local": "wrangler d1 migrations apply ask-humans --local",
     "db:migrate:remote": "wrangler d1 migrations apply ask-humans --remote"
   },
